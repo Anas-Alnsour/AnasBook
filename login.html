@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./login.css">
+</head>
+<body>
+    <div class="login-wrapper">
+        <img src="./images/AnasBook logo.webp" alt="logo">
+        <form action="login.php" method="post" class="login-form">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                <label for="email">Email</label>
+            </div>
+            <div class="input-box">
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <label for="password">Password</label>
+            </div>
+            <button type="submit" class="submit-btn">Sign In</button>
+            <div class="login-link">
+                <label><a href="register.html">Don't have an account?</a></label>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

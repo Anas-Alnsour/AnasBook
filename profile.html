@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="profile.css" />
+  </head>
+  <body>
+    <div class="profile-wrapper">
+      <div class="update-profile">
+        <form action="update.php" method="post" class="profile-form">
+          <h1>Update Profile</h1>
+          <div class="flex">
+            <div class="inputBox">
+              <span>Your Email:</span>
+              <input type="email" name="email" value="" class="box" required />
+            </div>
+            <div class="inputBox">
+              <span>Old Password:</span>
+              <input
+                type="password"
+                name="old_pass"
+                placeholder="Enter previous password"
+                class="box"
+                required
+              />
+              <span>New Password:</span>
+              <input
+                type="password"
+                name="password_1"
+                placeholder="Enter new password"
+                class="box"
+                required
+              />
+              <span>Confirm Password:</span>
+              <input
+                type="password"
+                name="password_2"
+                placeholder="Confirm new password"
+                class="box"
+                required
+              />
+            </div>
+          </div>
+          <input
+            type="submit"
+            value="Update Profile"
+            name="update_profile"
+            class="submit-btn"
+          />
+        </form>
+      </div>
+
+      <div class="delete-profile">
+        <form action="delete.php" method="post" class="profile-form">
+          <h1>Delete Profile</h1>
+          <div class="flex">
+            <div class="inputBox">
+              <span>Username:</span>
+              <input
+                type="text"
+                name="email"
+                value=""
+                class="box"
+                placeholder="Enter Email"
+                required
+              />
+            </div>
+            <div class="inputBox">
+              <span>Password:</span>
+              <input
+                type="password"
+                name="password"
+                placeholder="Enter password"
+                class="box"
+                required
+              />
+            </div>
+          </div>
+          <input
+            type="submit"
+            value="Delete Profile"
+            name="delete_profile"
+            class="submit-btn"
+          />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

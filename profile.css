@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom right, #1a1a2e, #16213e, #0f3460);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  font-size: 16px;
+}
+
+.profile-wrapper {
+  width: 100%;
+  max-width: 480px;
+  background: #212a4a;
+  border-radius: 12px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.profile-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.2), transparent 70%);
+  transform: rotate(30deg);
+  animation: rotateBackground 6s linear infinite;
+  z-index: 0;
+}
+
+@keyframes rotateBackground {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.profile-form {
+  position: relative;
+  z-index: 1;
+}
+
+.profile-form h1 {
+  font-size: 30px;
+  color: #ffffff;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.inputBox {
+  margin-bottom: 20px;
+  position: relative;
+  text-align: left;
+}
+
+.inputBox span {
+  font-size: 16px;
+  color: #aaa;
+  margin-bottom: 5px;
+  display: block;
+  font-weight: 500;
+}
+
+.inputBox input {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #2b3856;
+  color: #fff;
+  transition: all 0.3s ease;
+  margin-top: 5px;
+}
+
+.inputBox input:focus {
+  background-color: #3e4e73;
+  outline: none;
+  box-shadow: 0 0 10px #4caf50;
+}
+
+.inputBox input:focus + label,
+.inputBox input:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 10px;
+  font-size: 12px;
+  color: #4caf50;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(to right, #4caf50, #81c784);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+  margin-top: 20px;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(to right, #66bb6a, #43a047);
+}
+
+.submit-btn:active {
+  transform: translateY(2px);
+}
+
+.delete-profile {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid #444;
+}
+
+.delete-profile h1 {
+  font-size: 30px;
+  color: #ffffff;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.delete-profile .inputBox {
+  margin-bottom: 20px;
+}
+
+.delete-profile .inputBox input {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #2b3856;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.delete-profile .inputBox input:focus {
+  background-color: #3e4e73;
+  outline: none;
+  box-shadow: 0 0 10px #f44336;
+}
+
+@media (max-width: 768px) {
+  .profile-wrapper {
+    padding: 35px 20px;
+  }
+
+  .profile-form h1 {
+    font-size: 26px;
+  }
+
+  .inputBox input {
+    font-size: 14px;
+  }
+
+  .submit-btn {
+    font-size: 16px;
+  }
+}
